@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./",
+    "rootDir": "./src",
+    "strict": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "app",
+    "lib",
+    "dist",
+    "node_modules",
+    "test",
+    "./*.js",
+    "./*.ts"
+  ]
+}

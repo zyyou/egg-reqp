@@ -1,0 +1,42 @@
+{
+  "name": "egg-reqp",
+  "version": "1.0.0",
+  "description": "egg xss过滤器",
+  "eggPlugin": {
+    "name": "reqp",
+    "optionalDependencies": [],
+    "env": [
+      "local",
+      "test",
+      "unittest",
+      "prod"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "egg": "^2.26.0",
+    "egg-bin": "^4.11.0",
+    "egg-mock": "^3.25.1"
+  },
+  "scripts": {
+    "test": "clear && egg-bin test",
+    "build": "clear && rm -rf ./app ./lib && tsc",
+    "release": "clear && npm run build && git checkout master && git merge dev && git push origin master && nrm use npm && npm publish && git checkout dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zyyou/egg-reqp"
+  },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "eggPlugin",
+    "egg-extend",
+    "eggextend",
+    "egg-reqp",
+    "egg-xss"
+  ],
+  "author": "zyy",
+  "license": "MIT"
+}
