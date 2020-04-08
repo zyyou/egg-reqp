@@ -1,6 +1,6 @@
 {
   "name": "egg-reqp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "egg xss过滤器",
   "eggPlugin": {
     "name": "reqp",
@@ -20,7 +20,7 @@
     "egg-mock": "^3.25.1"
   },
   "scripts": {
-    "test": "clear && egg-bin test",
+    "test": "npm run build && egg-bin test",
     "build": "clear && rm -rf ./app ./lib && tsc",
     "release": "clear && npm run build && git checkout master && git merge dev && git push origin master && nrm use npm && npm publish && git checkout dev"
   },
