@@ -22,7 +22,7 @@
   "scripts": {
     "test": "npm run build && egg-bin test",
     "build": "clear && rm -rf ./app ./lib && tsc",
-    "release": "clear && npm run build && git checkout master && git merge dev && git push origin master && nrm use npm && npm publish && git checkout dev"
+    "release": "clear && git checkout master && git merge dev && git push origin master && npm run build && nrm use npm && npm publish && git checkout dev"
   },
   "repository": {
     "type": "git",
