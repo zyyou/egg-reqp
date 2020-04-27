@@ -2,7 +2,7 @@ import { Context } from 'egg';
 
 function escapeValue(ctx: Context, params: any, key: string) {
   // ctx.logger.warn('params', params, 'key', key);
-  if (!params || !params[key]) {
+  if (!params || !params.hasOwnProperty(key)) {
     return undefined;
   }
   return ctx.helper.escape(params[key]);

@@ -21,6 +21,8 @@ describe('test/extend.test.js', () => {
       .get('/query?text_enc=%3Cscript%3Ealert(%22query.text%22)%3C%2Fscript%3E&text=<script>alert("query.text")</script>')
       .expect(200);
 
+    // app.logger.warn('res', result.body);
+
     assert(result.body.reqp.indexOf('<') === -1, '未转义' + JSON.stringify(result.body));
     return result;
   });
@@ -41,6 +43,8 @@ describe('test/extend.test.js', () => {
         text_enc: '%3Cscript%3Ealert(%22body.text%22)%3C%2Fscript%3E',
       })
       .expect(200);
+
+    // app.logger.warn('res', result.body);
 
     assert(result.body.reqp.indexOf('<') === -1, '未转义' + JSON.stringify(result.body));
     return result;
